@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer'; // Import the Footer component
+import Home from './pages/Home'; // Import the Home component
 
 function App() {
   const [teas, setTeas] = useState([]);
@@ -19,12 +21,9 @@ function App() {
     <div>
       <Navbar />
       <div style={{ paddingTop: '60px' }}>
-        <ul>
-          {teas.map(tea => (
-            <li key={tea._id}>{tea.name}</li>
-          ))}
-        </ul>
+        <Home /> {/* Render the Home component */}
       </div>
+      <Footer /> {/* Add the Footer component */}
     </div>
   );
 }

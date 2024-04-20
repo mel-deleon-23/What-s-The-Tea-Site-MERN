@@ -33,4 +33,49 @@ nav {
     text-decoration: none;
     color: #585147;
   }
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed; /* Fix the footer at the bottom of the viewport */
+    width: 100%; /* Make the footer span the full width of the viewport */
+    bottom: 0; /* Position the footer at the bottom of the viewport */
+  }
+  
+  footer p {
+    margin: 0;
+  }
+
+
+.home-container {
+    padding: 20px;
+  }
+  
+  .introduction-section {
+    margin-bottom: 40px;
+  }
+  
+  .introduction-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .introduction-content img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .teas-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .tea-item img {
+    width: 100%;
+    height: auto;
+  }
   
