@@ -5,7 +5,7 @@ nav {
     padding: 10px;
     background-color: #87f4b3;
     color: #585147;
-    position: fixed; /* Fixes the navbar at the top of the screen */
+    /* position: fixed; */
     width: 100%; /* Makes the navbar span the full width of the screen */
     top: 0; /* Positions the navbar at the top of the screen */
   }
@@ -39,7 +39,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed; /* Fix the footer at the bottom of the viewport */
+    /* position: fixed; */
     width: 100%; /* Make the footer span the full width of the viewport */
     bottom: 0; /* Position the footer at the bottom of the viewport */
   }
@@ -53,29 +53,47 @@ footer {
     padding: 20px;
   }
   
-  .introduction-section {
-    margin-bottom: 40px;
-  }
-  
   .introduction-content {
     display: flex;
     align-items: center;
+    padding-bottom: 30px;
   }
   
-  .introduction-content img {
-    width: 200px;
-    height: auto;
+  .introduction-image {
+    width: 400px;
     margin-right: 20px;
   }
   
-  .teas-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+  .introduction-text {
+    font-size: 18px;
   }
   
-  .tea-item img {
+  .teas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .tea-item {
+    width: calc(33.33% - 20px); /* Adjust as needed */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .tea-image {
     width: 100%;
-    height: auto;
+    height: auto; /* Ensure image aspect ratio is maintained */
+  }
+  
+  .tea-name {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .tea-price {
+    margin-top: 5px;
+    font-weight: bold;
   }
   

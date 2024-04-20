@@ -1,36 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 
 const Home = () => {
-  const [teas, setTeas] = useState([]);
-
-  useEffect(() => {
-    axios.get('http://localhost:8888/api/teas')
-      .then(response => {
-        setTeas(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching teas:', error);
-      });
-  }, []);
-
   return (
     <div className="home-container">
       <section className="introduction-section">
         <div className="introduction-content">
-          <img src="your_image_url" alt="Introduction" />
-          <p>Introduction text goes here...</p>
+          <img src="src/images/tea-and-books.jpg" alt="Introduction" className="introduction-image" />
+          <p className="introduction-text">Introduction text goes here...</p>
         </div>
       </section>
       <section className="teas-section">
         <div className="teas-container">
-          {teas.map(tea => (
-            <div key={tea._id} className="tea-item">
-              <img src={tea.image} alt={tea.name} />
-              <h3>{tea.name}</h3>
-              <p>{tea.price}</p>
+            <div className="tea-item">
+              <img src="src/images/tea-and-books.jpg" className="tea-image" alt="Tea" />
+              <h3 className="tea-name">Earl Gray Tea</h3>
+              <p className="tea-price">$4.99</p>
             </div>
-          ))}
+            <div className="tea-item">
+              <img src="src/images/tea-and-books.jpg" className="tea-image" alt="Tea" />
+              <h3 className="tea-name">Sweet Jasmine Tea</h3>
+              <p className="tea-price">$5.99</p>
+            </div>
+            <div className="tea-item">
+              <img src="src/images/tea-and-books.jpg" className="tea-image" alt="Tea" />
+              <h3 className="tea-name">Green Tea</h3>
+              <p className="tea-price">$3.99</p>
+            </div>
         </div>
       </section>
     </div>

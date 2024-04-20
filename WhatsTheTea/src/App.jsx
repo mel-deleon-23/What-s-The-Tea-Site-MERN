@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer'; // Import the Footer component
-import Home from './pages/Home'; // Import the Home component
+import Home from './pages/Home'; // Import the Home page
 
 function App() {
   const [teas, setTeas] = useState([]);
