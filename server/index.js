@@ -19,6 +19,17 @@ app.use(cors({
 
 //API endpoints
 
+// Homepage endpoint
+app.get("/api/home", async (request, response) => {
+  // You can fetch data for the homepage from your database or any other source
+  // For example, you can return some static data for demonstration purposes
+  const homepageData = {
+    title: "Welcome to What's The Tea?",
+    description: "Discover a world of flavors with our exquisite teas."
+  };
+  response.json(homepageData);
+});
+
 /*
  * returns: an array of drinks list
  */
@@ -27,15 +38,16 @@ app.get("/api/teas", async (request, response) => {
   response.json(teas); //send JSON object with appropriate JSON headers
 });
 
-/*
- * returns: an a single drink
- */
-app.get("/api/details/:id", async (request, response) => {
-    let teaId = request.params.id;
-    let tea = await getDetailTea(teaId);
-    response.json(tea); //send JSON object with appropriate JSON headers
-  });
-
+// About page endpoint
+app.get("/api/about", async (request, response) => {
+  // You can fetch data for the About page from your database or any other source
+  // For example, you can return some static data for demonstration purposes
+  const aboutData = {
+    title: "About Us",
+    description: "Learn more about our cafe and our commitment to quality."
+  };
+  response.json(aboutData);
+});
 
   
 //set up server listening

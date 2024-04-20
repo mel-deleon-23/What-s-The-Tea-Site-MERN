@@ -3,6 +3,7 @@ import axios from 'axios';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer'; // Import the Footer component
 import Home from './pages/Home'; // Import the Home page
+import Teas from './pages/Teas'; 
 
 function App() {
   const [teas, setTeas] = useState([]);
@@ -21,7 +22,10 @@ function App() {
     <div>
       <Navbar />
       <div style={{ paddingTop: '60px' }}>
-        <Home /> {/* Render the Home component */}
+        {/* Use the Home component */}
+        <Home />
+        {/* Use the Teas component */}
+        {/* <Teas /> */}
       </div>
       <Footer /> {/* Add the Footer component */}
     </div>

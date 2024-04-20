@@ -48,19 +48,26 @@ footer {
     margin: 0;
   }
 
-
+  
+/* HOME PAGE */
 .home-container {
-    padding: 20px;
+    padding: 0 30px;
   }
   
+  section h2 {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+
   .introduction-content {
     display: flex;
     align-items: center;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
   }
   
   .introduction-image {
-    width: 400px;
+    width: 600px;
     margin-right: 20px;
   }
   
@@ -96,4 +103,4 @@ footer {
     margin-top: 5px;
     font-weight: bold;
   }
-  
+
