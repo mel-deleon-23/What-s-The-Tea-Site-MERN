@@ -1,0 +1,36 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #87f4b3;
+    color: #585147;
+    position: fixed; /* Fixes the navbar at the top of the screen */
+    width: 100%; /* Makes the navbar span the full width of the screen */
+    top: 0; /* Positions the navbar at the top of the screen */
+  }
+  
+  nav h3 {
+    margin-left: 25px; /* Removes default margin */
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 5px;
+    padding-right: 50px;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li:first-child {
+    margin-left: 0;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #585147;
+  }
+  

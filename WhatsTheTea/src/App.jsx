@@ -1,19 +1,31 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import NavBar from './components/Navbar';
-import Home from './pages/Home';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Navbar from './components/Navbar';
 
-const App = () => {
+function App() {
+  const [teas, setTeas] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:8888/api/teas')
+      .then(response => {
+        setTeas(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching teas:', error);
+      });
+  }, []);
+
   return (
-    <Router>
-      <div>
-        <NavBar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          {/* Add routes for other pages here */}
-        </Switch>
+    <div>
+      <Navbar />
+      <div style={{ paddingTop: '60px' }}>
+        <ul>
+          {teas.map(tea => (
+            <li key={tea._id}>{tea.name}</li>
+          ))}
+        </ul>
       </div>
-    </Router>
+    </div>
   );
 }
 
